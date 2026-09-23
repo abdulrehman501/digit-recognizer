@@ -4,7 +4,10 @@ from pathlib import Path
 
 import pandas as pd
 
-RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
+KAGGLE_INPUT = Path("/kaggle/input/digit-recognizer")
+LOCAL_RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
+
+RAW_DIR = KAGGLE_INPUT if KAGGLE_INPUT.exists() else LOCAL_RAW
 
 IMAGE_SIZE = 28
 N_PIXELS = IMAGE_SIZE * IMAGE_SIZE

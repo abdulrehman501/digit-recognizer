@@ -1,7 +1,26 @@
+# Environments
 .venv/
+.venv_*/
+
+# Competition data - download from Kaggle, never commit (125 MB)
+data/*.csv
 data/raw/
 data/processed/
+
+# Trained model weights - regenerable build artifacts
+*.pt
+*.pth
+
+# Generated submissions
+submissions/
+
+# Python
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# Credentials
 kaggle.json
+
+# Personal study notes - not part of the project
+LEARNING.md
